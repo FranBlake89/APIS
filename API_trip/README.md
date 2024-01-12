@@ -1,10 +1,12 @@
 # Bike Trip API
 
 ## Description:
-This project serves as the foundation for the WEB422 course, focusing on loading sample data into MongoDB Atlas and creating a Web API. The provided code guides users through setting up a server, connecting to MongoDB, and defining essential routes for interacting with the data.
+This project serves as the foundation for the WEB422 course, focusing on loading sample data into MongoDB Atlas and creating a Web API. The provided code guides users through setting up a server, connecting to MongoDB, and defining essential routes for interacting with the data. 
+
+Additionally, this project is intricately connected to the Trip Bikes Interface, showcasing proficiency not only in frontend but also in backend development. It reflects a holistic understanding of web development, where skills in data manipulation, server setup, and API creation converge to create a well-rounded foundation
 
 ## Objectives:
-- Load sample data into MongoDB Atlas for the WEB422 course.
+- Load sample data into MongoDB Atlas.
 - Build and publish a Web API to interact with the loaded data.
 - Implement routes for creating, retrieving, updating, and deleting trip records.
 
