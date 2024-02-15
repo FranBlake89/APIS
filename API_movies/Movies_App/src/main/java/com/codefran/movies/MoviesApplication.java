@@ -13,14 +13,10 @@ public class MoviesApplication {
 		SpringApplication.run(MoviesApplication.class, args);
 	}
 
-	@GetMapping("/")
-	public String apiRoot(){
-		return "Hello World!";
-	}
-
+/*
+ TESTING CONNECTIONS
 	@GetMapping("/test")
-	public String test(){
-		return "TEST PAGE GET MAPPING";
-	}
+	public String test(){ return "TEST PAGE GET MAPPING"; }
+*/
 
 }
