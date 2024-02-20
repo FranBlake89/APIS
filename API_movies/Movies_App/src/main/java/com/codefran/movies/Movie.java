@@ -12,7 +12,7 @@ import java.util.List;
 
 @Document(collection="movies")
 @Data //getters and setters
-@AllArgsConstructor //constructor with all param
+@AllArgsConstructor //constructor with all args
 @NoArgsConstructor //constructor without args
 public class Movie {
     @Id
