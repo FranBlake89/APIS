@@ -1,2 +1,33 @@
+# JS
 node_modules
+
+# Mac
 .DS_Store
+
+# Python
+__pycache__
+*.pyc
+instance/
+*.egg-info
+dist
+build
+*.pyc
+*.pyo
+*.pyd
+
+# Environment Variables
+.env
+
+# Virtual ENV
+.venv
+venv
+
+# Dependency directory
+env
+lib bin
+
+# Editor Specific files
+*.swp
+.vscode
+.idea  
+
