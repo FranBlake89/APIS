@@ -23,8 +23,7 @@ Express.js API with JWT authentication for user registration, login, managing fa
 
 The Movie Review Backend was developed using Java and Spring Boot. This backend is connected to MongoDB, enabling the handling of movie details. The project, constructed with Spring Boot, serves as the backend for a [Movie Review App](on construction... 🚧).
 
-### 4. [CRUD portafolio Projects](./API_CRUD_Projects): ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![Flask](https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white) ![JWT Authentication](https://img.shields.io/badge/JWT-Authentication-blue) ![CORS](https://img.shields.io/badge/CORS-enabled-yellow)
-	
+### 4. [CRUD portafolio Projects](./API_CRUD_Projects):  ![NODE](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white) ![EXPRESS](https://res.cloudinary.com/practicaldev/image/fetch/s--Rl0DwDaF--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_880/https://img.shields.io/badge/Express.js-404D59%3Fstyle%3Dfor-the-badge) ![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white) ![JWT Authentication](https://img.shields.io/badge/JWT-Authentication-blue) ![CORS](https://img.shields.io/badge/CORS-enabled-yellow) ![Passport.js](https://img.shields.io/badge/Passport.js-LocalStrategy-red)
 This API, developed using Flask, is designed to streamline the management of various portfolio projects. It employs JWT authentication and interfaces seamlessly with both MongoDB and SQL databases. The primary objective of this API is to simplify the process of updating our portfolio, thereby enhancing efficiency and productivity.
 
 

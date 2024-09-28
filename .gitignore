@@ -17,6 +17,7 @@ build
 
 # Environment Variables
 .env
+.env.local
 
 # Virtual ENV
 .venv
