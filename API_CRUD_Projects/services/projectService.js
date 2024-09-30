@@ -2,26 +2,36 @@ const config = require('../config/config');
 const Project = require('../models/Project');
 
 // Create new Project
-const addProject = async () =>{
-
+const createProject = async (projectData) =>{
+    const newProject = new Project(projectData);
+    return await newProject.save();
 }
 
 // Read project
-const getProject = async () =>{
-    
+const getProjectById = async (id) =>{
+    return await Project.findById(id);
 }
 
 // Update project
-const updateProject = async () =>{
-    
+const updateProjectById = async (id, updateData) =>{
+    return await Project.findByIdAndUpdate(id, updateData);
 }
 
 //Delete Project
-const deleteProject = async () =>{
-    
+const deleteProjectById = async (id) =>{
+    return await Project.findByIdAndDelete(id);
 }
 
 // Get all 
-const allProjects = async () =>{
-    
+const getAllProjects = async () =>{
+    return await  Project.find();
+}
+
+
+module.exports={
+    createProject,
+    getProjectById,
+    updateProjectById,
+    deleteProjectById,
+    getAllProjects
 }

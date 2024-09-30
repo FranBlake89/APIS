@@ -29,21 +29,26 @@ const registerUser =  async (username, password, email) => {
         password:hashedPassword,
         email:email
     });
-    
+//todo delete this console.log
     console.log(user);
     return await user.save();    
 }
 
 //Login New User
-const LoginUser = async (username, password) =>{
-    const user = await User.findOne({username});
-
-    if(!user || !(await bcrypt.compare(password,user.password))){
+const loginUser = async (username, password) => {
+    const user = await User.findOne({name: username});
+    if(!user ){
+        console.log ('Ups! Usuario ')
+    }
+    if( !(await bcrypt.compare(password,user.password)) ){
+        console.log ('Ups! contraseña incorrectos.')
+    }
+    if(!user || !(await bcrypt.compare(password, user.password))){
         throw new Error ('Ups! Usuario o contraseña incorrectos.')
     }
 
-    const token = jwt.sign({  
-        id:user._id, tokenVersion:user.tokenVersion },
+    const token = jwt.sign(
+        { id: user._id, tokenVersion: user.tokenVersion },
         config.JWT_SECRET, 
         {expiresIn:'1h'}
     );
@@ -53,5 +58,5 @@ const LoginUser = async (username, password) =>{
 
 module.exports = {
     registerUser,
-    LoginUser
+    loginUser
 };
