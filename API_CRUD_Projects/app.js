@@ -18,6 +18,12 @@ mongoose.connect(config.MONGO_URI)
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
+TODO 
+app.use('/api/education', educationRoutes);
+TODO
+app.use('/api/skills', skillRoutes);
+TODO
+app.use('/api/certificates', certificatesRoutes);
 
 const PORT = config.PORT;
 // Start server
