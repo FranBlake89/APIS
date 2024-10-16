@@ -55,9 +55,13 @@ const updateDegreeById = async (req, res) =>{
 } 
 const deleteDegreeById = async (req, res) =>{
     try {
-        
+        await educationService.deleteDegreeById(req.params.id);
+        res.status(204).send();
     } catch (error) {
-        
+        res.status(500).json({
+            message:'Error al borrar el grado',
+            error
+        })
     }
 }
 
