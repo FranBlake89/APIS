@@ -64,7 +64,6 @@ const deleteDegreeById = async (req, res) =>{
         })
     }
 }
-
 module.exports={
     createDegree,
     getAllDegree,

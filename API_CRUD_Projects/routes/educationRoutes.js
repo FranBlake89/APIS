@@ -6,9 +6,7 @@ const { createDegree, getAllDegree, getDegreeById, updateDegreeById, deleteDegre
 
 const { validateEducation } = require('../utils/validations');
 
-
-
-router.post('/', authMiddleware, validateEducation, createDegree);// Create a new project
+router.post('/create-degree', authMiddleware, validateEducation, createDegree);// Create a new project
 router.get('/', getAllDegree);             // Get all projects
 router.get('/:id', getDegreeById);         // Get project by ID
 router.put('/:id', authMiddleware, validateEducation, updateDegreeById);// Update a project by ID

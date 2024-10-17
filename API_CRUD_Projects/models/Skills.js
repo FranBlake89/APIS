@@ -19,7 +19,6 @@ const SkillCategorySchema = new Schema(
         _id: false 
     }
 ); 
-
 // Define the main schema for Skills
 const SkillsSchema = new Schema(
     {
@@ -32,6 +31,4 @@ const SkillsSchema = new Schema(
         collection: 'Skills', timestamps: true 
     }
 );
-
-
 module.exports = mongoose.model('Skills', SkillsSchema);
