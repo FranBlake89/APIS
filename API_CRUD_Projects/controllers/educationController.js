@@ -1,6 +1,8 @@
 const educationService = require('../services/educationService');
 
 const createDegree = async (req, res) =>{
+    const {institution, degree, country } = req.body;
+    
     if( !institution || !degree || !country.name ){
         return res.status(400).json({
             message: 'Por favor, proporciona todos los campos requeridos'
