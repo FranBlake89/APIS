@@ -17,10 +17,10 @@ const getSkillById = async(id) =>{
     return await Skills.findById(id);
 }
 const updateSkillById = async (id, dataSkill) =>{
-
+    return await Skills.findByIdAndUpdate(id, updateData);
 }
 const deleteSkillById = async(id) =>{
-
+    return await Skills.findByIdAndDelete(id);
 }
 module.exports={
     createCategory,

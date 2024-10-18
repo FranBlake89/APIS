@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 
-const SkillCategorySchema = new Schema (
+const CertificateSchema = new Schema (
     {
         title:{type:String, required:true},
         institution:{ type:String, required:true},
