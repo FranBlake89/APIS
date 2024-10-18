@@ -1,15 +1,15 @@
 const express = require('express');
-const router = express.Router();
+const projectRouter = express.Router();
 const { validateProject } = require('../utils/validations');
 const { authMiddleware } = require('../middlewares/authMiddlewares');
 
 const { createProject, getAllProjects, getProjectById, updateProjectById, deleteProjectById } = require('../controllers/projectController');
 
-router.post('/create-project', authMiddleware, validateProject, createProject);// Create a new project
-router.get('/', getAllProjects);// Get all projects
-router.get('/:id', getProjectById);// Get project by ID
-router.put('/:id', authMiddleware, validateProject, updateProjectById);// Update a project by ID
-router.delete('/:id', authMiddleware, deleteProjectById);// Delete a project by ID
+projectRouter.post('/create-project', authMiddleware, validateProject, createProject); // Create a new project
+projectRouter.get('/', getAllProjects); // Get all projects
+projectRouter.get('/:id', getProjectById); // Get project by ID
+projectRouter.put('/:id', authMiddleware, validateProject, updateProjectById); // Update a project by ID
+projectRouter.delete('/:id', authMiddleware, deleteProjectById); // Delete a project by ID
 
 
-module.exports = router;
+module.exports = projectRouter;

@@ -32,10 +32,10 @@ const validateProject = [
     },
 ];
 
-const validateEducation= [
+const validateEducation = [
     check('degree')
         .notEmpty().withMessage('El grado es requerido')
-        .isString(),withMessage('El grado debe ser solo letras'),
+        .isString().withMessage('El grado debe ser solo letras'),
     check('institution')
         .notEmpty().withMessage('La institución es requerida')
         .isString().withMessage('Institution must be a string'),

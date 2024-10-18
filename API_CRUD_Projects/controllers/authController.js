@@ -9,7 +9,6 @@ const register = async (req, res) =>{
         res.status(400).json({message: error.message});
     }
 }; 
-
 const login = async (req, res) => {
     try {
         const {username, password} = req.body;
@@ -22,7 +21,6 @@ const login = async (req, res) => {
         res.status(401).json({ message: error.message });
     }
 };
-
 const logout = async (req, res) =>{
     try {
         const user = await User.findBy(req.user._id);
@@ -39,7 +37,6 @@ const logout = async (req, res) =>{
     }
 
 };
-
 module.exports = {
     register,
     login,

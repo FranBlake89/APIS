@@ -4,6 +4,8 @@ const cors = require('cors');
 const authRoutes = require('./routes/authRoutes');
 const projectRoutes = require('./routes/projectRoutes');
 const skillsRoutes = require('./routes/skillsRoutes')
+const educationRoutes = require('./routes/educationRoutes')
+const certificatesRoutes = require('./routes/certificateRoutes')
 const config = require('./config/config');
 
 const app = express();
@@ -20,9 +22,7 @@ mongoose.connect(config.MONGO_URI)
 app.use('/api/auth', authRoutes);
 app.use('/api/projects', projectRoutes);
 app.use('/api/education', educationRoutes);
-TODO
 app.use('/api/skills', skillsRoutes);
-TODO
 app.use('/api/certificates', certificatesRoutes);
 
 const PORT = config.PORT;

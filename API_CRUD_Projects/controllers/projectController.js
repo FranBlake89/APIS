@@ -1,6 +1,5 @@
 const projectService = require('../services/projectService');
 
-
 const createProject = async (req, res) =>{
     if(!title || !shortDesc || !longDesc || !urlDemo || !urlRepo ){
         return res.status(400).json({message: 'Por favor, proporciona los campos requeridos'});
@@ -12,7 +11,6 @@ const createProject = async (req, res) =>{
         res.status(500).json({message:'Error creando proyecto', error})
     }
 }
-
 const getProjectById = async (req, res) =>{
     try {
         const project = await projectService.getProjectById(req.params.id);
@@ -24,7 +22,6 @@ const getProjectById = async (req, res) =>{
         res.status(500).json({message:'Error al obtener el proyecto especificado', error});
     }
 }
-
 const updateProjectById = async (req, res) =>{
     try {
         const updateProject = await projectService.updateProjectById(req.params.id, req.body);
@@ -33,7 +30,6 @@ const updateProjectById = async (req, res) =>{
         res.status(500).json({message:'Error al actualizar el proyecto', error});
     }
 }
-
 const deleteProjectById = async (req, res) =>{
     try {
         await projectService.deleteProjectById(req.params.id);
@@ -42,7 +38,6 @@ const deleteProjectById = async (req, res) =>{
         res.status(500).json({message:'Error al borrar el proyecto', error})
     }
 }
-
 const getAllProjects = async (req, res) =>{
     try {
         const projects = await projectService.getAllProjects();
@@ -51,7 +46,6 @@ const getAllProjects = async (req, res) =>{
         res.status(500).json({message: 'Error al obtener los proyectos', error});
     }
 }
-
 module.exports={
     getAllProjects,
     createProject,
