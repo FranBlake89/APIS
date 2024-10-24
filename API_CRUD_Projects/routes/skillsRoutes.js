@@ -1,6 +1,6 @@
 const express = require('express');
 const skillRouter = express.Router();
-const{ authMiddleware } = require('../middlewares/authMiddlewares');
+const{ verifyToken } = require('../middlewares/authMiddlewares');
 
 const {  
     createCategory,
@@ -11,11 +11,11 @@ const {
     deleteSkillById,
 } = require('../controllers/skillController');
 
-skillRouter.post('/create-category', authMiddleware, createCategory)
-skillRouter.post('/create-skill', authMiddleware, createSkill);
+skillRouter.post('/create-category', verifyToken, createCategory)
+skillRouter.post('/create-skill', verifyToken, createSkill);
 skillRouter.get('/', getAllSkills);
 skillRouter.get('/:id', getSkillById);
-skillRouter.put('/:id', authMiddleware, updateSkillById);
-skillRouter.delete('/:id', authMiddleware, deleteSkillById);
+skillRouter.put('/:id', verifyToken, updateSkillById);
+skillRouter.delete('/:id', verifyToken, deleteSkillById);
 
 module.exports = skillRouter;

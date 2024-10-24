@@ -1,9 +1,11 @@
 const projectService = require('../services/projectService');
 
 const createProject = async (req, res) =>{
-    if(!title || !shortDesc || !longDesc || !urlDemo || !urlRepo ){
+    const data = req.body;
+    if(!data.title || !data.shortDesc || !data.longDesc || !data.urlDemo || !data.urlRepo ){
         return res.status(400).json({message: 'Por favor, proporciona los campos requeridos'});
     }
+
     try {
         const project = await projectService.createProject(req.body);
         res.status(201).json(project);

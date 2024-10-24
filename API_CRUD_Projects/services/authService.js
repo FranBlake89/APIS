@@ -2,6 +2,7 @@ const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const config = require('../config/config');
 const User = require('../models/User');
+
 const {validatePassword, validateEmail} = require('../utils/validations');
 
 //Register New User
@@ -25,9 +26,9 @@ const registerUser =  async (username, password, email) => {
     const hashedPassword = await bcrypt.hash(password, 10);
 
     const user = new User({
-        name:username,
-        password:hashedPassword,
-        email:email
+        name: username,
+        password: hashedPassword,
+        email: email
     });
 //todo delete this console.log
     console.log(user);
@@ -38,13 +39,11 @@ const registerUser =  async (username, password, email) => {
 const loginUser = async (username, password) => {
     const user = await User.findOne({name: username});
     if(!user ){
-        console.log ('Ups! Usuario ')
+        throw new Error ('Invalid username or password');
     }
-    if( !(await bcrypt.compare(password,user.password)) ){
-        console.log ('Ups! contraseña incorrectos.')
-    }
-    if(!user || !(await bcrypt.compare(password, user.password))){
-        throw new Error ('Ups! Usuario o contraseña incorrectos.')
+    const validPassword = await bcrypt.compare(password, user.password);
+    if (!validPassword) {
+        throw new Error('Invalid username or password.'); 
     }
 
     const token = jwt.sign(
